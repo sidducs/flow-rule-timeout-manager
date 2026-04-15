@@ -53,6 +53,7 @@ sudo mn --topo single,2 --controller=remote,ip=127.0.0.1,port=6633 --switch ovsk
 ### Test 1: Connectivity
 
 pingall
+
 <img width="535" height="178" alt="image" src="https://github.com/user-attachments/assets/2c04757a-4e03-4a8c-9a62-1d35f61bbca4" />
 
 
