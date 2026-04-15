@@ -1,4 +1,4 @@
-# Flow Rule Timeout Manager
+# 22.Flow Rule Timeout Manager
 
 ## Problem Statement
 
@@ -54,6 +54,8 @@ sudo mn --topo single,2 --controller=remote,ip=127.0.0.1,port=6633 --switch ovsk
 
 ```
 pingall
+<img width="535" height="178" alt="image" src="https://github.com/user-attachments/assets/2c04757a-4e03-4a8c-9a62-1d35f61bbca4" />
+
 ```
 
 Result: 0% packet loss
@@ -64,6 +66,8 @@ Result: 0% packet loss
 
 ```
 sh ovs-ofctl dump-flows s1
+<img width="900" height="696" alt="image" src="https://github.com/user-attachments/assets/d2218594-d34a-4373-8de6-776fbfeec0ff" />
+
 ```
 
 * Flow entries are created after traffic
@@ -80,11 +84,18 @@ sh ovs-ofctl dump-flows s1
 * Wait 10 seconds
 * Check flow table again
 
+  <img width="500" height="76" alt="image" src="https://github.com/user-attachments/assets/10a57974-570b-4bab-b173-b2da658f78a5" />
+
 Result:
 
 * Flow entries are removed automatically
 
 ---
+### Controller Logs
+<img width="892" height="782" alt="image" src="https://github.com/user-attachments/assets/b1070020-63ce-4818-82d3-16e7832d98b8" />
+
+The controller handles PacketIn events and installs flow rules with timeout.
+
 
 ## Performance Analysis
 
